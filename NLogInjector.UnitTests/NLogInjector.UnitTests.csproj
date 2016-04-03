@@ -60,6 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="nlog_ctor_injection.cs" />
+    <Compile Include="nlog_field_injection.cs" />
     <Compile Include="nlog_property_injection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

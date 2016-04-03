@@ -1,11 +1,10 @@
-using JetBrains.Annotations;
 using NLog;
 
 namespace NLogInjector.Sample
 {
-	[UsedImplicitly]
 	internal class LoggerFieldSample
 	{
+		[InjectLogger]
 		private readonly ILogger _logger = NullLogger.Instance;
 
 		public LoggerFieldSample()

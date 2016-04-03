@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Autofac;
 using Autofac.Core;
 using NLog;
+using RuskinDantra.Extensions;
 
 namespace NLogInjector
 {
@@ -29,14 +31,14 @@ namespace NLogInjector
 		{
 			var instanceType = instance.GetType();
 			
-			var fields = instanceType
+			IEnumerable<FieldInfo> fields = instanceType
 				.GetFields(BindingFlags.NonPublic | BindingFlags.Instance)
 				.Where(p => p.FieldType == typeof(ILogger));
 
-			// Set the properties located.
 			foreach (var field in fields)
 			{
-				field.SetValue(instance, LogManager.GetLogger(instanceType.FullName));
+				if (field.HasAttribute<InjectLogger>())
+					field.SetValue(instance, LogManager.GetLogger(instanceType.FullName));
 			}
 		}
 

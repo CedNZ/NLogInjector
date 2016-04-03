@@ -14,11 +14,14 @@
 		<tags>CSharp extensions</tags>
 		<releaseNotes>
 			3-Apr-16
-				* Initial commit
+			* Initial commit
+			* Added a field attribute which means that ILogger must be decorated with InjectLogger for the injection logic to consider it
+				(Allows us to respect owner driven fields if they do exist)
 		</releaseNotes>
 		<dependencies>
 			<dependency id="NLog" version="4.2.3" />
 			<dependency id="Autofac" version="3.5.2" />
+			<dependency id="RuskinDantra.Extensions" version="1.0.30" />
 		</dependencies>
 	</metadata>
 	<files>

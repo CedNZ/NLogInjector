@@ -5,19 +5,19 @@ using NUnit.Framework;
 
 namespace NLogInjector.UnitTests
 {
-	internal class property_injection_test_class
-	{
-		public ILogger Logger { get; set; }
-
-		public void LogSomething()
-		{
-			Logger.Info("Hello world");
-		}
-	}
-
 	[TestFixture]
     public class nlog_property_injection
     {
+		private class property_injection_test_class
+		{
+			public ILogger Logger { get; set; }
+
+			public void LogSomething()
+			{
+				Logger.Info("Hello world");
+			}
+		}
+
 		[Test]
 	    public void logger_property_should_be_injected_if_used_via_autofac()
 		{
