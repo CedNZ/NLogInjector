@@ -12,7 +12,7 @@ assembly_info:
   assembly_informational_version: '{version}'
 configuration: Release
 before_build: 
-  - nuget restore Extensions.sln
+  - nuget restore NLogInjector.sln
 after_build:
   - nuget pack NLogInjector\NLogInjector.nuspec -Version %appveyor_build_version%
   - appveyor PushArtifact NLogInjector.%appveyor_build_version%.nupkg
