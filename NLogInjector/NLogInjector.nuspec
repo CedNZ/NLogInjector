@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+	<metadata>
+		<id>NLogInjector</id>
+		<version>$version$</version>
+		<title>NLogInjector</title>
+		<authors>Ruskin Dantra</authors>
+		<owners>ruskindantra</owners>
+		<projectUrl>https://github.com/ruskindantra/NLogInjector</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<licenseUrl>https://github.com/ruskindantra/NLogInjector/blob/master/LICENSE</licenseUrl>
+		<description>Allows injecting NLog logger using AutoFac via constructor, field or property injection</description>
+		<copyright>Copyright © 2016 Ruskin Dantra</copyright>
+		<tags>CSharp extensions</tags>
+		<releaseNotes>
+			3-Apr-16
+				* Initial commit
+		</releaseNotes>
+		<dependencies>
+			<dependency id="NLog" version="4.2.3" />
+			<dependency id="Autofac" version="3.5.2" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="\bin\release\NLogInjector.dll" target="lib\net452" />
+	</files>
+</package>
