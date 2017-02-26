@@ -10,6 +10,4 @@ install:
 
 script:
   - xbuild /p:Configuration=Release NLogInjector.sln
-
-after_script:
   - nunit-console NLogInjector.UnitTests/bin/Release/NLogInjector.UnitTests.dll
