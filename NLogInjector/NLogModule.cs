@@ -37,7 +37,7 @@ namespace NLogInjector
 
 			foreach (var field in fields)
 			{
-				if (field.HasAttribute<InjectLogger>())
+				if (field.HasAttribute<InjectLoggerAttribute>())
 					field.SetValue(instance, LogManager.GetLogger(instanceType.FullName));
 			}
 		}

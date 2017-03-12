@@ -53,7 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InjectLogger.cs" />
+    <Compile Include="InjectLoggerAttribute.cs" />
     <Compile Include="NLogModule.cs" />
     <Compile Include="NullLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
