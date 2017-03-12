@@ -62,13 +62,5 @@ namespace NLogInjector
 				InjectLoggerFields(e.Instance);
 			};
 		}
-
-		protected override void Load(ContainerBuilder builder)
-		{
-			builder
-				.Register(context => LogManager.GetCurrentClassLogger())
-				.As<ILogger>()
-				.SingleInstance();
-		}
 	}
 }
