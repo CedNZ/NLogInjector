@@ -17,14 +17,16 @@
 			* Initial commit
 			* Added a field attribute which means that ILogger must be decorated with InjectLogger for the injection logic to consider it
 				(Allows us to respect owner driven fields if they do exist)
+      11-Mar-17
+      * Upgraded to .net 4.6.2
 		</releaseNotes>
 		<dependencies>
-			<dependency id="NLog" version="4.2.3" />
-			<dependency id="Autofac" version="3.5.2" />
-			<dependency id="RuskinDantra.Extensions" version="1.0.30" />
+			<dependency id="NLog" version="4.4.4" />
+			<dependency id="Autofac" version="4.4.0" />
+			<dependency id="RuskinDantra.Extensions" version="1.0.43" />
 		</dependencies>
 	</metadata>
 	<files>
-		<file src=".\bin\release\NLogInjector.dll" target="lib\net452" />
+		<file src=".\bin\release\NLogInjector.dll" target="lib\net462" />
 	</files>
 </package>

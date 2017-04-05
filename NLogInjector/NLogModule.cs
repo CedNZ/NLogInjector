@@ -37,7 +37,7 @@ namespace NLogInjector
 
 			foreach (var field in fields)
 			{
-				if (field.HasAttribute<InjectLogger>())
+				if (field.HasAttribute<InjectLoggerAttribute>())
 					field.SetValue(instance, LogManager.GetLogger(instanceType.FullName));
 			}
 		}
@@ -61,14 +61,6 @@ namespace NLogInjector
 				InjectLoggerProperties(e.Instance);
 				InjectLoggerFields(e.Instance);
 			};
-		}
-
-		protected override void Load(ContainerBuilder builder)
-		{
-			builder
-				.Register(context => LogManager.GetCurrentClassLogger())
-				.As<ILogger>()
-				.SingleInstance();
 		}
 	}
 }
