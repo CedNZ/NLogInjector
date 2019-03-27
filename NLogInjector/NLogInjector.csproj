@@ -5,6 +5,11 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyVersion>1.1.0</AssemblyVersion>
     <FileVersion>1.1.0</FileVersion>
+    <Authors>Ruskin Dantra, Cedric Bourneville</Authors>
+    <Description>Allows injecting NLog logger using AutoFac via constructor, field or property injection</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageTags>nlog netstandard CSharp extensions</PackageTags>
+    <PackageLicenseUrl>https://github.com/ruskindantra/NLogInjector/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.9.2" />
