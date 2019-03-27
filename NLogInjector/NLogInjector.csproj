@@ -7,8 +7,8 @@
     <FileVersion>1.1.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="4.9.1" />
-    <PackageReference Include="JetBrains.Annotations" Version="2018.3.0" />
+    <PackageReference Include="Autofac" Version="4.9.2" />
+    <PackageReference Include="JetBrains.Annotations" Version="2019.1.1" />
     <PackageReference Include="NLog" Version="4.6.0" />
     <PackageReference Include="RuskinDantra.Extensions" Version="2.0.9" />
   </ItemGroup>
